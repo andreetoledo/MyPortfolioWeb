@@ -4,10 +4,10 @@ import ProjectInfo from '../Items/ProjectInfo'
 import '../main.scss'
 
 const images = [
-    "https://kdawpmedia.storage.googleapis.com/data-circuit-cube1.jpg",
-    "https://kdawpmedia.storage.googleapis.com/data-circuit-cube1.jpg",
-    "https://kdawpmedia.storage.googleapis.com/data-circuit-cube1.jpg",
-    "https://kdawpmedia.storage.googleapis.com/data-circuit-cube1.jpg",
+    "https://github.com/andreetoledo/MyPortfolioWeb/blob/master/MyPortfolioWeb/resources/images/memory.JPG?raw=true",
+    "https://github.com/andreetoledo/MyPortfolioWeb/blob/master/MyPortfolioWeb/resources/images/chat.JPG?raw=true",
+    "https://github.com/andreetoledo/MyPortfolioWeb/blob/master/MyPortfolioWeb/resources/images/memory.JPG?raw=true",
+    "https://github.com/andreetoledo/MyPortfolioWeb/blob/master/MyPortfolioWeb/resources/images/chat.JPG?raw=true",
 ];
 
 const info = [
