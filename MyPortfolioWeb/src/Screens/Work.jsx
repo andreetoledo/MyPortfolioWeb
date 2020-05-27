@@ -2,7 +2,7 @@ import React from "react"
 import '../main.scss'
 import Showcase from '../Items/Showcase'
 
-export default class RecentAchievements extends React.Component {
+export default class Work extends React.Component {
     render() {
         return (
             <div style={{textAlign: 'center', marginBottom:'2em'}}>
