@@ -1,114 +1,53 @@
-import React from "react"
-import Particles from 'react-particles-js';
+import React from 'react'
+import * as THREE from 'three'
+import GLOBE from '../../src/vanta.globe.min.js'
+import '../main.scss'
 
-const Intro = ({currentHeight, opacity}) => (
-    <div style={{ opacity: opacity }}>
-        <div className="WholeScreen BGLogo"/>
-        <Particles
-            params={{
-                "particles": {
-                    "number": {
-                        "value": 40,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#ffffff"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 80,
-                        "color": "#ffffff",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 3,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "bounce",
-                        "bounce": false,
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "bubble"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "repulse"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 400,
-                            "line_linked": {
-                                "opacity": 1
-                            }
-                        },
-                        "bubble": {
-                            "distance": 100,
-                            "size": 8,
-                            "duration": 2,
-                            "opacity": 1,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
-                    }
-                },
-                "retina_detect": true
-            }} style={{position:'fixed'}}/>
-            <div style={{height: currentHeight, display:'block'}} />
-    </div>
-);
+class Intro extends React.Component {
+    constructor(props) {
+        super(props)
+        this.vantaRef = React.createRef()
+        this.state = {
+            currentHeight: window.innerHeight,
+            showText: false
+
+        }
+    }
+
+    componentDidMount() {
+        this.vantaEffect = GLOBE({
+            el: this.vantaRef.current,
+            mouseControls: true,
+            touchControls: true,
+            minHeight: window.innerHeight,
+            minWidth: window.innerWidth,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x252525,
+            shininess: 71.00,
+            waveHeight: 30.00,
+            waveSpeed: 0.75,
+            THREE: THREE
+        })
+        setTimeout(() => {
+            this.setState({ showText: true })
+        },2000);
+    }
+    componentWillUnmount() {
+        if (this.vantaEffect) {
+            this.vantaEffect.destroy()
+        }
+    }
+    render() {
+        const height = window.innerHeight;
+        return <div style={{ position: 'relative', height: height }} ref={this.vantaRef}>
+            <div style={{ height: height, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection:'column' }} >
+                <p className={this.state.showText ? 'ShowText' : 'HideText'} style={{ color: '#fff', fontSize:45, margin:10 }}>Andree Toledo</p>
+                <hr className={this.state.showText ? 'title-border-animate' : 'title-border'}></hr>
+            </div>
+        </div>
+
+    }
+}
 
 export default Intro;

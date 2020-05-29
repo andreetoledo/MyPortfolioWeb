@@ -3,8 +3,8 @@ import '../main.scss'
 
 const ProjectInfo = ({ title, description, itch, git }) => (
     <div className="ProjectInfo">
-        <h1 className="cardTitle">{title}</h1>
-        <p className="cardDesc">{description}</p>
+        <h1 className="cardTitle" style={{color:'#fff'}}>{title}</h1>
+        <p className="cardDesc" style={{color:'#fff'}}>{description}</p>
         <div className="half-colored">
             <ul>
                 <li><a href={git} target="_blank"><i className="fab fa-github"></i></a></li>

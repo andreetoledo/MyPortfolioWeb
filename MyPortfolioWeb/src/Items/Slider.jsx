@@ -14,7 +14,7 @@ const Slider = ({info, images}) => {
             } else {
                 setIndex(prev => prev + 1);
             }
-        }, 20000);
+        }, 5000);
         return () => clearInterval(timer);
     }, [index]);
 

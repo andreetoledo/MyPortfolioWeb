@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:100,200,300,400&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
-@import url('https://kit.fontawesome.com/4a1d8beb77.js');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:100,200,300,400&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+@import url("https://kit.fontawesome.com/4a1d8beb77.js");
 $dark-blue: #1b2a49;
 $grey-blue: #465881;
 $light-blue: #00909e;
@@ -36,7 +36,7 @@ canvas {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #00909e 0%, #1b2a49 100%);
+    background: linear-gradient(45deg, grey 0%, #000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -132,16 +132,18 @@ body {
 }
 
 .title {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 300;
     font-size: 3em;
+    color: white;
 }
 
 .paragraph {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 300;
     font-size: 1em;
     margin: 0 10% 3% 10%;
+    color: white;
 }
 
 .cardSpace {
@@ -154,7 +156,6 @@ body {
     background: white;
     width: 450px;
     margin: 1% 0 1% 0;
-    border-radius: 10%;
     padding: 1%;
     animation-name: float;
     animation-duration: 5s;
@@ -163,20 +164,21 @@ body {
 }
 
 .cardTitle {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 300;
     font-size: 2em;
+    
 }
 
 .cardDesc {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 300;
     font-size: 1em;
-    margin: 4% 10% 4% 10%;
+    margin: 4% 8%;
 }
 
 .cardImg {
-    width: 100%;
+    width: 35%;
 }
 
 .Games {
@@ -211,7 +213,7 @@ body {
     height: 70px;
     width: 235px;
     border-radius: 5px;
-    background-color: #4292FF;
+    background-color: #4292ff;
     box-shadow: 0 2px #256dcf;
     text-decoration: none;
     cursor: pointer;
@@ -234,7 +236,6 @@ body {
     background-color: #dd4b39;
 }
 
-
 /* Start Half-colored Social Media */
 
 .half-colored {
@@ -254,11 +255,11 @@ body {
     line-height: 75px;
     text-align: center;
     font-size: 40px;
-    background-color: #FFF;
+    background-color: #fff;
     overflow: hidden;
     color: #000;
     position: relative;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     transform: rotate(45deg);
     z-index: 1;
     cursor: pointer;
@@ -266,32 +267,32 @@ body {
 
 .half-colored ul li .fab {
     transform: rotate(-45deg);
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     color: #262626;
 }
 
 .half-colored ul li:hover .fab {
-    color: #FFF;
+    color: #fff;
 }
 
 .half-colored ul li .fas {
     transform: rotate(-45deg);
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     color: #262626;
 }
 
 .half-colored ul li:hover .fas {
-    color: #FFF;
+    color: #fff;
 }
 
 .half-colored ul li:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: -1;
 }
 
@@ -308,16 +309,16 @@ body {
 }
 
 .half-colored ul li:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 100%;
     right: 0;
     background-color: #dd4b39;
     width: 100%;
     height: 100%;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: -2;
-    opacity: .9;
+    opacity: 0.9;
 }
 
 .half-colored ul li:nth-child(1):after {
@@ -335,6 +336,38 @@ body {
 .half-colored ul li:hover:after {
     top: 0;
 }
-
+.ShowText {
+    opacity: 1;
+    transform: translateY(10);
+    transition: all 0.4s ease;
+}
+.HideText {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 0.4s ease;
+}
+.title-border-animate {
+    width: 300px;
+    height: 1px;
+    background-color: white;
+}
+.title-border {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.4s ease;
+    width: 300px;
+    height: 1px;
+    background-color: white;
+}
+.title-border-animate {
+    
+    opacity: 1;
+    transform: translateY(10);
+    transition: all 0.4s ease;
+    width: 280px;
+    height: 1px;
+    background-color: white;
+    transition-delay: 0.8s;
+}
 
 /* End Half-colored Social Media */

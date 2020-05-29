@@ -23,7 +23,18 @@ const info = [
         itch: "http://quetzaluno.space/18439/laboratorio5.html",
         git: "https://github.com/andreetoledo"
     },
-
+    {
+        title: " Nintendo Memory Game",
+        description: "A basic memory game created with javascritp, react and css.",
+        itch: "http://quetzaluno.space/18439/laboratorio6.html",
+        git: "https://github.com/andreetoledo/Laboratorio_6_WEB"
+    },
+    {
+        title: "Simple Chat",
+        description: "A simple chat created for the Web class.",
+        itch: "http://quetzaluno.space/18439/laboratorio5.html",
+        git: "https://github.com/andreetoledo"
+    },
 
 ]
 
