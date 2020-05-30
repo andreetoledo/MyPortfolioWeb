@@ -1,6 +1,7 @@
 import React from "react"
 import '../main.scss'
 import Showcase from '../Items/Showcase'
+import HtmlToPdf from '../gistfile'
 
 export default class Work extends React.Component {
     render() {
